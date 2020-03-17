@@ -1,0 +1,427 @@
+/*General css----------------------------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Verdana, Sans-serif;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: Times, Georgia, serif;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  color: #999;
+}
+
+/*CTA button*/
+a.related {
+  text-decoration: none;
+  border-bottom: 3px solid #000;
+  color: #000;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  transition: 1s;
+  position: relative;
+  display: inline-block;
+}
+
+a.related:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  border-bottom: 0px solid #000;
+  height: 33px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+a.related:hover::before {
+  top: -50px;
+  border-bottom: 3px solid #000;
+}
+
+/*header#side--------------------------------------------------------------------------------------------------------*/
+header#side {
+  width: 13%;
+  overflow: auto;
+  position: fixed;
+  z-index: 5;
+  height: 100%;
+  padding: 10px 0 15px 0;
+}
+
+header #logo,
+header nav#mainNav li#bar {
+  display: none;
+}
+
+header #branding img {
+  margin: auto;
+  display: block;
+  margin-bottom: 45px;
+}
+
+header nav#mainNav li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+header nav#mainNav li a i {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+header nav#mainNav #sideNav li {
+  text-align: center;
+}
+
+header nav#mainNav #sideNav li a {
+  color: #a1a1a1;
+  display: inline-block;
+  padding: 35px 0px 15px 0px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+  width: 70%;
+  height: 60px;
+  position: relative;
+  border-bottom: 1px solid grey;
+}
+
+/*adding hover states for navigation menu item*/
+header nav#mainNav #sideNav li a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 35px;
+  left: 0;
+  color: #000;
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  display: inline-block;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  height: 24px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+header nav#mainNav #sideNav li a:hover:before {
+  width: 100%;
+}
+
+/*section#main----------------------------------------------------------------------------------------------*/
+section#main {
+  width: 100%;
+  padding-left: 13%;
+}
+
+/* section#main section#carousel-------------------------------------------------------------------------------------------*/
+section#main #carousel {
+  height: auto;
+  margin-bottom: 0;
+}
+
+section#main #carousel #carousel-first {
+  position: relative;
+}
+section#main #carousel #carousel-last {
+  display: none;
+  position: relative;
+}
+
+section#main #carousel #heroImage {
+  width: 100%;
+}
+
+section#main #carousel #heroImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+section#main #carousel #carousel-first #services {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 45%;
+}
+
+section#main #carousel #carousel-first #services .col {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+section#main #carousel #carousel-first #services .col p {
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  line-height: 17px;
+  font-size: 13px;
+}
+
+section#main #carousel #carousel-last #strategy {
+  position: absolute;
+  width: 45%;
+  top: 150px;
+  left: 60px;
+}
+
+section#main #carousel #dot {
+  position: absolute;
+  right: 30px;
+  top: 45%;
+  z-index: 1;
+}
+
+section#main #carousel #dot .circle {
+  display: block;
+  text-align: right;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: blue;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+section#main #carousel #dot .dot1 {
+  background-color: #ff00cc;
+}
+
+section#main section#carousel #dot .circle:active {
+  background-color: #ff00cc;
+}
+
+/*section#main section#business-------------------------------------------------------------------------------------------*/
+section#main section#development {
+  background-color: #f9f9f9;
+  height: auto;
+}
+
+section#main .left {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+section#main .left img {
+  width: 100%;
+}
+section#main .text {
+  padding: 35px 0px 0px 60px;
+}
+
+/*section#main section#contact-------------------------------------------------------------------------------------------*/
+section#main section#contact {
+  text-align: center;
+  padding: 70px 0;
+  background-color: #f1f1f1;
+  height: 500px;
+}
+
+section#main section#contact input {
+  padding: 20px;
+  outline: none;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto 50px auto;
+  display: block;
+}
+
+/*section#main footer-------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+footer i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  border: 2px solid #333;
+  margin-right: 15px;
+  transition: 1.5s;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+footer i:hover {
+  color: #ff00cc;
+}
+
+/*make the page responsive--------------------------------------------------------------------------------------*/
+
+/* media query for screen less than 992px wide*/
+@media only screen and (max-width: 992px) {
+  /*navigation*/
+  header#side {
+    position: static;
+    width: 100%;
+    padding: 10px;
+  }
+
+  header #branding {
+    display: none;
+  }
+  header #logo {
+    display: block;
+  }
+
+  header nav#mainNav #sideNav {
+    display: none;
+    width: 20%;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  header nav#mainNav li#bar {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+
+  /*section#main*/
+  section#main {
+    padding-left: 0;
+  }
+
+  /*section#business, section#development*/
+  section#main .left {
+    float: none;
+    width: 100%;
+  }
+
+  section#main .text {
+    padding: 40px 30px 0px;
+    text-align: center;
+  }
+
+  /*section#contact*/
+  section#main section#contact {
+    padding: 40px 20px 0px;
+  }
+} /*End of media query for screen less than 992px wide*/
+
+/*for screen less than 860px wide*/
+@media only screen and (max-width: 860px) {
+  header nav#mainNav #sideNav {
+    width: 40%;
+  }
+
+  section#main #carousel #carousel-first #services {
+    top: 20px;
+    font-size: 13px;
+  }
+
+  section#main #carousel #carousel-last #strategy {
+    top: 30px;
+    width: 30%;
+  }
+
+  section#main #carousel p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  section#main #carousel #carousel-first #services .col p {
+    font-size: 10px;
+  }
+
+  section#main #carousel h1 {
+    font-size: 20px;
+  }
+
+  section#main #carousel #carousel-first #services .col img {
+    width: 50%;
+    height: 50%;
+    margin-top: 0;
+  }
+
+  section#main #carousel #dot {
+    right: 20px;
+    top: 40%;
+    z-index: 1;
+  }
+
+  section#main section#contact input {
+    width: 90%;
+  }
+} /*End of screen less than 860px wide*/
+
+/*for screen less than 600px wide*/
+@media only screen and (max-width: 600px) {
+  header nav#mainNav #sideNav {
+    width: 50%;
+  }
+
+  section#main #carousel #heroImage img {
+    height: 150px;
+  }
+
+  section#main #carousel #carousel-last #strategy,
+  section#main #carousel #carousel-first #services {
+    top: 150px;
+    height: 300px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  section#main #carousel p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  section#main #carousel #carousel-first #services .col p {
+    font-size: 13px;
+  }
+
+  section#main #carousel h1 {
+    font-size: 32px;
+  }
+
+  section#main section#business {
+    margin-top: 300px;
+  }
+
+  section#main #carousel #dot {
+    right: 20px;
+    top: 35%;
+    z-index: 1;
+  }
+} /*End of screen less than 600px wide*/
